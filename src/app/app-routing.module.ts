@@ -14,6 +14,11 @@ const routes: Routes = [
         m => m.FavoledipaneModule
       )
   },
+  {
+    path: 'angular',
+    loadChildren: () =>
+      import('./root/angular/angular.module').then(m => m.AngularModule)
+  },
   { path: '**', redirectTo: '' }
 ];
 

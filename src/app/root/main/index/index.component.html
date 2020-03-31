@@ -1,1 +1,69 @@
-<p>index works!</p>
+<div class="site-wrap" [ngClass]="{'offcanvas-menu' : mainService.getValue() | async}">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span><a (click)="mainService.toggleMenu()">
+            <fa-icon [icon]="faTimes"></fa-icon>
+          </a></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body">
+      <ul class="site-nav-wrap">
+        <li><a [routerLink]="['/favoledipane']" class="nav-link">Favole di Pane </a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="header-bar d-flex d-lg-block align-items-center site-navbar-target" data-aos="fade-right">
+
+
+    <div class="div-menu-icon d-inline-block d-lg-none ml-md-0 ml-auto py-3" style="position: relative; top: 3px;">
+      <span>
+        <a class="text-white" (click)="mainService.toggleMenu()">
+          <fa-icon [icon]="faBars"></fa-icon>
+        </a></span></div>
+
+    <div class="main-menu ">
+      <ul>
+        <li><a [routerLink]="['/favoledipane']" class="nav-link">Favole di Pane</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <section class="site-section-hero bg-image" data-stellar-background-ratio="0.5" id="section-home">
+      <div class="row justify-content-center align-items-center m-0">
+        <div class="col-md-7 text-center p-0">
+          <h1 class="text-white heading text-uppercase" data-aos="fade-up">#PESCOACASA
+          </h1>
+          <div class="d-flex p-text align-items-center">
+
+            <div>
+              <p class="lead text-white m-3" data-aos="fade-up" data-aos-delay="100">
+                <b>A seguito delle misure di
+                  sicurezza
+                  per l'emergenza COVID-19,
+                  abbiamo deciso di mettere a disposizione dei commercianti e dei cittadini di Pescopagano una
+                  piattaforma per
+                  effettuare ordini online. Consulta l'elenco dei negozi che aderiscono all'iniziativa.</b>
+              </p>
+            </div>
+            <div class="div-megafono m-3">
+
+              <fa-icon [icon]="faTruck"></fa-icon>
+
+            </div>
+          </div>
+          <p data-aos="fade-up" data-aos-delay="100" class="pt-2"><button (click)="mainService.toggleMenu()"
+              class="btn btn-info btn-md smoothscroll btn-showlist">Guarda la lista</button></p>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+</div>

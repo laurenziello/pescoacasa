@@ -1,5 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'pesco-index',
@@ -7,8 +6,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
-  faHome = faHome;
-
+  title = 'pescoacasa';
   constructor() {}
 
   ngOnInit(): void {}
