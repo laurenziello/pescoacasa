@@ -22,6 +22,6 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'Stale issue ${{ github.actor }} message'
-        stale-pr-message: 'Stale pull request message'
-        stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
+        stale-pr-message: 'Stale pull ${{ github.actor }} request message'
+        stale-issue-label: 'no-issue-activity ${{ github.actor }}'
+        stale-pr-label: 'no-pr-activity ${{ github.actor }}'
